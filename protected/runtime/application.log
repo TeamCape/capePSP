@@ -347,3 +347,27 @@ Stack trace:
 #12 {main}
 REQUEST_URI=/capePSP/index.php?r=product/view
 ---
+2017/06/09 10:38:50 [error] [php] Undefined index: UnitOfMeasure (G:\xampp\htdocs\capePSP\protected\views\product\list.php:14)
+Stack trace:
+#0 G:\xampp\htdocs\capePSP\framework\web\CController.php(872): ProductController->renderFile()
+#1 G:\xampp\htdocs\capePSP\framework\web\CController.php(785): ProductController->renderPartial()
+#2 G:\xampp\htdocs\capePSP\protected\controllers\ProductController.php(68): ProductController->render()
+#3 unknown(0): ProductController->actionList()
+#4 G:\xampp\htdocs\capePSP\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs()
+#5 G:\xampp\htdocs\capePSP\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#6 G:\xampp\htdocs\capePSP\framework\web\CController.php(308): CInlineAction->runWithParams()
+#7 G:\xampp\htdocs\capePSP\framework\web\filters\CFilterChain.php(134): ProductController->runAction()
+#8 G:\xampp\htdocs\capePSP\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#9 G:\xampp\htdocs\capePSP\framework\web\CController.php(1148): CAccessControlFilter->filter()
+#10 G:\xampp\htdocs\capePSP\framework\web\filters\CInlineFilter.php(58): ProductController->filterAccessControl()
+#11 G:\xampp\htdocs\capePSP\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#12 G:\xampp\htdocs\capePSP\framework\web\CController.php(291): CFilterChain->run()
+#13 G:\xampp\htdocs\capePSP\framework\web\CController.php(265): ProductController->runActionWithFilters()
+#14 G:\xampp\htdocs\capePSP\framework\web\CWebApplication.php(282): ProductController->run()
+#15 G:\xampp\htdocs\capePSP\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#16 G:\xampp\htdocs\capePSP\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#17 G:\xampp\htdocs\capePSP\index.php(13): CWebApplication->run()
+REQUEST_URI=/capePSP/index.php?r=product/list&id=1
+in G:\xampp\htdocs\capePSP\protected\views\product\list.php (14)
+in G:\xampp\htdocs\capePSP\protected\controllers\ProductController.php (68)
+in G:\xampp\htdocs\capePSP\index.php (13)

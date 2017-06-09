@@ -5,12 +5,9 @@
         <group>
             <file>file:/G:/xampp/htdocs/capePSP/protected/controllers/ProductController.php</file>
             <file>file:/G:/xampp/htdocs/capePSP/protected/views/layouts/main.php</file>
-            <file>file:/G:/xampp/htdocs/capePSP/protected/views/site/about.php</file>
             <file>file:/G:/xampp/htdocs/capePSP/protected/views/product/_view.php</file>
-            <file>file:/G:/xampp/htdocs/capePSP/protected/controllers/SiteController.php</file>
             <file>file:/G:/xampp/htdocs/capePSP/protected/views/product/view.php</file>
-            <file>file:/G:/xampp/htdocs/capePSP/protected/views/site/index.php</file>
-            <file>file:/G:/xampp/htdocs/capePSP/protected/views/site/contact.php</file>
+            <file>file:/G:/xampp/htdocs/capePSP/protected/views/product/list.php</file>
         </group>
     </open-files>
 </project-private>

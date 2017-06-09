@@ -6,6 +6,8 @@
  * The followings are the available columns in table 'product':
  * @property integer $Id
  * @property string $Name
+ * @property integer $Quantity
+ * @property string $UnitsOfMeasure
  * @property integer $CategoryId
  * @property integer $Price
  * @property string $Description
@@ -31,14 +33,15 @@ class Product extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('Name, CategoryId, UserFK', 'required'),
-			array('CategoryId, Price, UserFK', 'numerical', 'integerOnly'=>true),
+			array('Name, Quantity, UnitsOfMeasure, CategoryId, UserFK', 'required'),
+			array('Quantity, CategoryId, Price, UserFK', 'numerical', 'integerOnly'=>true),
 			array('Name', 'length', 'max'=>150),
+			array('UnitsOfMeasure', 'length', 'max'=>50),
 			array('Image', 'length', 'max'=>255),
 			array('Description, Date', 'safe'),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('Id, Name, CategoryId, Price, Description, Date, UserFK, Image', 'safe', 'on'=>'search'),
+			array('Id, Name, Quantity, UnitsOfMeasure, CategoryId, Price, Description, Date, UserFK, Image', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -61,6 +64,8 @@ class Product extends CActiveRecord
 		return array(
 			'Id' => 'ID',
 			'Name' => 'Name',
+			'Quantity' => 'Quantity',
+			'UnitsOfMeasure' => 'Units Of Measure',
 			'CategoryId' => 'Category',
 			'Price' => 'Price',
 			'Description' => 'Description',
@@ -90,6 +95,8 @@ class Product extends CActiveRecord
 
 		$criteria->compare('Id',$this->Id);
 		$criteria->compare('Name',$this->Name,true);
+		$criteria->compare('Quantity',$this->Quantity);
+		$criteria->compare('UnitsOfMeasure',$this->UnitsOfMeasure,true);
 		$criteria->compare('CategoryId',$this->CategoryId);
 		$criteria->compare('Price',$this->Price);
 		$criteria->compare('Description',$this->Description,true);

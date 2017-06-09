@@ -55,7 +55,7 @@ class ProductController extends Controller
 			'model'=>$this->loadModel($id),
 		));
 	}
-        
+
         public function actionList($id)
         {
             $data=Yii::app()->db->createCommand()
@@ -68,8 +68,7 @@ class ProductController extends Controller
 			'data'=>$data,
 		));
         }
-
-        /**
+	/**
 	 * Creates a new model.
 	 * If creation is successful, the browser will be redirected to the 'view' page.
 	 */

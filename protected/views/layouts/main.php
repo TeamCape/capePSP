@@ -45,13 +45,18 @@
                   </div>
                   <div class="rd-navbar-panel-inner">
                     <div><a href="#" class="btn btn-default btn-icon btn-icon-left"><span class="icon fa-phone"></span><span class="text-middle">880-2-9888049</span></a></div>
-                    <div>
+<!--                    <div>
                       <ul class="list-inline list-inline-xs">
                         <li><a href="#" class="icon icon-circle icon-primary icon-xs fa-facebook"></a></li>
                         <li><a href="#" class="icon icon-circle icon-primary icon-xs fa-twitter"></a></li>
                         <li><a href="#" class="icon icon-circle icon-primary icon-xs fa-youtube"></a></li>
                         <li><a href="#" class="icon icon-circle icon-primary icon-xs fa-linkedin"></a></li>
                       </ul>
+                    </div>-->
+                    <div> 
+                        <button class="btn btn-primary ">Cart Item: </button>
+                        
+                        <button class="btn btn-primary " data-toggle="modal" data-target="#myCart" id="cart">0</button>
                     </div>
                     <div> <button class="btn btn-primary ">Sign in!</button></div>
                   </div>
@@ -164,7 +169,7 @@
     <!-- Java script-->
     <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/core.min.js"></script>
     <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/script.js"></script>
-    
+    <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/custom.js"></script>
 
 </body>
 </html>
